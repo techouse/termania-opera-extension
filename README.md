@@ -51,6 +51,12 @@ Unfortunately the Sloleks database housing all those 100.000 lemmas is quite lar
 and importing it into IndexedDB takes about 5 minutes to complete during which time you wou't be
 able to use the extension.
 
+The extension also supports dark mode :sunglasses:
+
+![Dark mode](screenshots/dark_mode.png)
+
+![Dark mode](screenshots/dark_mode2.png)
+
 ## How do I build it from source?
 The extension uses a lot of different JavaScript libraries and has to be compiled with [npm](https://nodejs.org/en/)
 and [Webpack](https://webpack.js.org). Ensure you have `Node.js` and `npm` installed and run these commands:
