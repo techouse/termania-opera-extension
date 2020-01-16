@@ -12,8 +12,11 @@ body {
 
   @media (prefers-color-scheme: dark) {
     * {
-      &:not(.dropdown) {
-        @apply text-white;
+      & {
+        :not(.dropdown)
+        :not(.form-checkbox) {
+          @apply text-white;
+        }
       }
     }
     background-color: #000;
