@@ -7,6 +7,7 @@
 # Termania.net Lookup Opera Extension
 
 [![GitHub license](https://img.shields.io/github/license/techouse/termania-opera-extension)](https://github.com/techouse/termania-opera-extension/blob/master/LICENSE)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/53e918514e674e8b917edd8d44e915cc)](https://www.codacy.com/manual/techouse/termania-opera-extension?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=techouse/termania-opera-extension&amp;utm_campaign=Badge_Grade)
 ![GitHub manifest.json dynamic](https://img.shields.io/github/manifest-json/permissions/techouse/termania-opera-extension)
 
 This Opera extension enables foreigners as well as Slovenian native speakers to search the extensive Slovenian
