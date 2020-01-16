@@ -1,0 +1,35 @@
+.color_orange {
+  color: #fb6f28;
+}
+
+.font_xlarge {
+  @apply text-xl;
+}
+
+.strong {
+  @apply font-bold;
+}
+
+.font_small {
+  @apply text-sm;
+}
+
+.font_large {
+  @apply text-lg;
+}
+
+.color_lightdark {
+  @apply text-gray-700;
+
+  @media (prefers-color-scheme: dark) {
+    @apply text-green-300;
+  }
+}
+
+.color_dark {
+  @apply text-black;
+
+  @media (prefers-color-scheme: dark) {
+    color: #88C7E5;
+  }
+}

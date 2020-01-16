@@ -1,0 +1,26 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+// Fonts
+@import "fonts";
+
+body {
+  @apply font-body;
+  font-size: 16px;
+  width: 480px;
+
+  @media (prefers-color-scheme: dark) {
+    * {
+      &:not(.dropdown) {
+        @apply text-white;
+      }
+    }
+    background-color: #000;
+  }
+}
+
+@import "vue-single-select";
+
+@import "tailwindcss/utilities";
+

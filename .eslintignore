@@ -1,0 +1,5 @@
+/webpack*.js
+/postcss.config.js
+/tailwind.config.js
+/.babelrc
+/dist/*.js
