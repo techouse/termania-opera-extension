@@ -167,6 +167,7 @@ if (production) {
         new TerserPlugin({
             cache: true,
             parallel: true,
+            extractComments: false,
         }),
     ]
 }

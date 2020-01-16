@@ -5,3 +5,5 @@ package-lock.json
 .env
 .idea
 termania.zip
+*.crx
+*.pem

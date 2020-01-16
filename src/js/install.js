@@ -37,7 +37,7 @@ const install = () => {
 
             import(/* webpackChunkName: "jszip" */ "jszip").then(({ default: JSZip }) => {
                 import(/* webpackChunkName: "dexie-export-import" */ "dexie-export-import").then(({ importDB }) => {
-                    fetch(chrome.runtime.getURL("data/db.zip"))
+                    fetch(chrome.runtime.getURL("data/db"))
                         .then((response) => response.blob())
                         .then((zipBlob) => db.delete()
                                              .then(() => JSZip.loadAsync(zipBlob)
