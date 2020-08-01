@@ -12,8 +12,8 @@ const isWatch = npm_config_argv.remain.some(el => el.startsWith("--watch"))
 const sourceMap = env === "development"
 const production = env === "production"
 const aliases = require("./webpack.aliases")
-const PurgecssPlugin = require('purgecss-webpack-plugin')
-const glob = require('glob-all')
+const PurgecssPlugin = require("purgecss-webpack-plugin")
+const glob = require("glob-all")
 
 const PATHS = {
     src: path.join(__dirname, "src")
@@ -120,28 +120,30 @@ const config = {
     },
     plugins: [
         new VueLoaderPlugin(),
-        new CopyPlugin([
-            {
-                from: path.resolve(__dirname, "src/html"),
-                to: path.resolve(__dirname, "build/html")
-            },
-            {
-                from: path.resolve(__dirname, "src/images"),
-                to: path.resolve(__dirname, "build/images")
-            },
-            {
-                from: path.resolve(__dirname, "src/data"),
-                to: path.resolve(__dirname, "build/data")
-            },
-            {
-                from: path.resolve(__dirname, "manifest.json"),
-                to: path.resolve(__dirname, "build")
-            },
-            {
-                from: path.resolve(__dirname, "LICENSE"),
-                to: path.resolve(__dirname, "build")
-            },
-        ]),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "src/html"),
+                    to: path.resolve(__dirname, "build/html")
+                },
+                {
+                    from: path.resolve(__dirname, "src/images"),
+                    to: path.resolve(__dirname, "build/images")
+                },
+                {
+                    from: path.resolve(__dirname, "src/data"),
+                    to: path.resolve(__dirname, "build/data")
+                },
+                {
+                    from: path.resolve(__dirname, "manifest.json"),
+                    to: path.resolve(__dirname, "build")
+                },
+                {
+                    from: path.resolve(__dirname, "LICENSE"),
+                    to: path.resolve(__dirname, "build")
+                },
+            ]
+        }),
         new MiniCssExtractPlugin({
             path: path.resolve(__dirname, "build/css"),
             filename: "css/[name].css",
@@ -149,10 +151,10 @@ const config = {
         }),
         new PurgecssPlugin({
             paths: glob.sync([
-                path.join(__dirname, 'src/html/*.html'),
-                path.join(__dirname, 'src/js/**/*.js'),
-                path.join(__dirname, 'src/js/**/*.vue'),
-                path.join(__dirname, 'node_modules/vue-single-select/dist/VueSingleSelect.vue')
+                path.join(__dirname, "src/html/*.html"),
+                path.join(__dirname, "src/js/**/*.js"),
+                path.join(__dirname, "src/js/**/*.vue"),
+                path.join(__dirname, "node_modules/vue-single-select/dist/VueSingleSelect.vue")
             ]),
             whitelist: ["color_orange", "font_xlarge", "strong", "color_lightdark", "font_small", "italic", "font_large", "color_dark"]
         }),
